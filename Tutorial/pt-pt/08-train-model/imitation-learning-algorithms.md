@@ -1,0 +1,7 @@
+[English](../../en/08-train-model/imitation-learning-algorithms.md) | [简体中文](../../zh-hans/08-train-model/imitation-learning-algorithms.md) | [繁體中文](../../zh-hant/08-train-model/imitation-learning-algorithms.md) | [Deutsch](../../de/08-train-model/imitation-learning-algorithms.md) | [Español](../../es/08-train-model/imitation-learning-algorithms.md) | [Français](../../fr/08-train-model/imitation-learning-algorithms.md) | [Italiano](../../it/08-train-model/imitation-learning-algorithms.md) | [日本語](../../ja/08-train-model/imitation-learning-algorithms.md) | [한국어](../../ko/08-train-model/imitation-learning-algorithms.md) | [Português (BR)](../../pt-br/08-train-model/imitation-learning-algorithms.md) | Português (PT)
+
+# Algoritmos de Aprendizagem por Imitação Suportados pelo LeRobot
+
+https://github.com/huggingface/lerobot/tree/main/src/lerobot/policies
+
+![Esta imagem mostra a estrutura dos algoritmos de aprendizagem por imitação suportados pelo LeRobot. "Robot Learning" está no topo e divide-se em duas categorias principais: "Behavioral Cloning (BC)" e "Reinforcement Learning (RL)". Sob BC, "Single-task policies" abrange ACT, Diffusion Policy, VQ-BET e outros, enquanto "Generalist policies" abrange π0 e SmolVLA. Sob RL estão HIL-SERL e TD-MPC. A imagem relaciona-se com a secção que introduz os algoritmos de aprendizagem por imitação suportados pelo LeRobot, apresentando visualmente a taxonomia e os algoritmos específicos que a compõem.](../../en/images/d42-01.png)

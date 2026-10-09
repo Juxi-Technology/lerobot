@@ -1,0 +1,3 @@
+[English](../en/08-train-model.md) | 简体中文 | [繁體中文](../zh-hant/08-train-model.md) | [Deutsch](../de/08-train-model.md) | [Español](../es/08-train-model.md) | [Français](../fr/08-train-model.md) | [Italiano](../it/08-train-model.md) | [日本語](../ja/08-train-model.md) | [한국어](../ko/08-train-model.md) | [Português (BR)](../pt-br/08-train-model.md) | [Português (PT)](../pt-pt/08-train-model.md)
+
+# 第八步：训练模型

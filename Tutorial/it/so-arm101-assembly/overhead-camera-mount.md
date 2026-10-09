@@ -1,0 +1,23 @@
+[English](../../en/so-arm101-assembly/overhead-camera-mount.md) | [简体中文](../../zh-hans/so-arm101-assembly/overhead-camera-mount.md) | [繁體中文](../../zh-hant/so-arm101-assembly/overhead-camera-mount.md) | [Deutsch](../../de/so-arm101-assembly/overhead-camera-mount.md) | [Español](../../es/so-arm101-assembly/overhead-camera-mount.md) | [Français](../../fr/so-arm101-assembly/overhead-camera-mount.md) | Italiano | [日本語](../../ja/so-arm101-assembly/overhead-camera-mount.md) | [한국어](../../ko/so-arm101-assembly/overhead-camera-mount.md) | [Português (BR)](../../pt-br/so-arm101-assembly/overhead-camera-mount.md) | [Português (PT)](../../pt-pt/so-arm101-assembly/overhead-camera-mount.md)
+
+# Tutorial di installazione del supporto per telecamera dall'alto
+
+Per il debug della telecamera USB con autofocus, consulta questo tutorial<cite doc-id="JXstdNbN6oiL1WxiqJrc2OJDnrf" file-type="docx" title="USB Autofocus Camera Tutorial" type="doc"></cite>
+
+
+
+<cite doc-id="OSElwwOmYiVMNTkzo56c40g8nQe" file-type="wiki" title="RealSense D405C Tutorial" type="doc"></cite>
+
+
+
+Supporto per telecamera dall'alto [file del modello ufficiale](https://github.com/TheRobotStudio/SO-ARM100/tree/main/Optional/Overhead_Cam_Mount_Webcam)
+
+![L'immagine mostra il primo passaggio della procedura di installazione del supporto per telecamera dall'alto. Nella figura di sinistra, il modulo telecamera è fissato alla parte superiore del supporto con 4 viti M2; nella figura di destra, la telecamera di profondità D405C è fissata alla parte superiore del supporto con 2 viti M3. L'immagine è strettamente legata al contesto e presenta visivamente come installare il modulo telecamera e la telecamera di profondità D405C sulla parte superiore del supporto, offrendo una chiara guida visiva per i passaggi successivi.](../../en/images/d11-01.png)
+
+![L'immagine mostra i passaggi di installazione del supporto per telecamera dall'alto. Nell'immagine di sinistra, una freccia rossa punta al centro della staffa, indicando che la staffa centrale viene inserita nella staffa superiore e fissata con 4 viti; nell'immagine di destra, una freccia rossa punta alla parte inferiore della base, indicando che la base inferiore viene inserita nella base centrale e fissata con 4 viti. Questa immagine riecheggia le istruzioni di installazione sopra — "collega la staffa centrale alla staffa superiore e la base inferiore alla base centrale" — e presenta visivamente i punti chiave dell'installazione.](../../en/images/d11-02.png)
+
+![L'immagine mostra il terzo passaggio della procedura di installazione del supporto per telecamera dall'alto, ovvero l'installazione della base del braccio sulla parte inferiore della staffa. La figura mostra la giunzione sul lato della parte inferiore della staffa, con una freccia che indica la direzione di inserimento, sottolineando che la base del braccio va inserita lì. Se si installano due bracci follower, questo passaggio va ripetuto. Questa immagine corrisponde al contesto del tutorial di installazione del supporto per telecamera dall'alto e presenta visivamente i punti chiave dell'installazione della base del braccio, aiutando gli utenti a completare l'installazione con precisione.](../../en/images/d11-03.png)
+
+![L'immagine mostra il passaggio del tutorial di installazione del supporto per telecamera dall'alto in cui il braccio follower viene installato sulla base del braccio. Nella figura di sinistra, la parte inferiore del braccio Follower è allineata dall'alto verso il basso con il supporto per telecamera dall'alto, con una freccia che indica la direzione di allineamento. La figura di destra mostra un morsetto che preme insieme il braccio Follower e il supporto per telecamera dall'alto. Questa immagine riecheggia l'istruzione sopra "installare il braccio follower sulla base del braccio" e presenta visivamente il passaggio chiave e il requisito di allineamento nell'installazione.](../../en/images/d11-04.png)
+
+![L'immagine mostra il risultato complessivo dell'uso del supporto per telecamera dall'alto. L'immagine in alto è una vista dall'alto della telecamera autofocus, con i kit da braccio doppi al centro della cornice e cubi colorati sotto. L'immagine successiva è la vista dall'alto della telecamera autofocus, che mostra anch'essa cubi colorati. Poi c'è la vista dal braccio sinistro, dove i cubi sono disposti diversamente. In basso c'è la vista dal braccio destro, dove la disposizione dei cubi cambia ancora. Queste viste mostrano il supporto da diverse angolazioni e corrispondono al supporto per telecamera dall'alto presentato nel contesto, presentandone visivamente il risultato installato.](../../en/images/d11-05.png)
