@@ -34,22 +34,15 @@
 
 ## 📚 Tutoriels détaillés
 
-### Chinois
+Tutoriels complets par système dans le dépôt [SO-ARM101-ServoController](https://github.com/Juxi-Technology/SO-ARM101-ServoController) :
 
 | OS | Tutoriel |
 |-|-|
-| Windows | \[Tutoriel Windows\](docs/zh/Windows教程.md) |
-| Linux | \[Tutoriel Linux\](docs/zh/Linux教程.md) |
-| macOS | \[Tutoriel macOS\](docs/zh/macOS教程.md) |
+| Windows | [Tutoriel Windows](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/fr/Windows.md) |
+| Linux | [Tutoriel Linux](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/fr/Linux.md) |
+| macOS | [Tutoriel macOS](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/fr/macOS.md) |
 
-### Anglais
-
-| OS | Guide |
-|-|-|
-| Windows | \[Guide Windows\](docs/en/Windows.md) |
-| Linux | \[Guide Linux\](docs/en/Linux.md) |
-| macOS | \[Guide macOS\](docs/en/macOS.md) |
-
+Autres langues : [docs/](https://github.com/Juxi-Technology/SO-ARM101-ServoController/tree/main/docs)
 ---
 
 ## 🖥️ Aperçu de l'interface
@@ -78,7 +71,7 @@ Le programme principal comporte trois onglets :
 
 ## 🚀 Démarrage rapide
 
-> Pour les tutoriels complets par système, voir \[📚 Tutoriels détaillés\](#-详细教程). Voici les points clés pour chaque système.
+> Pour les tutoriels complets par système, voir [📚 Tutoriels détaillés](#-tutoriels-détaillés). Voici les points clés pour chaque système.
 
 ### Windows
 
@@ -279,8 +272,8 @@ python -m src.tools.run_calibration_middle <校准文件.json> --mode zero
 1. **La sécurité d'abord** : l'étalonnage du centre est persisté dans l'EEPROM. Avant d'étalonner, assurez-vous que l'alimentation est stable et que le bras n'entrera en collision avec personne ni aucun objet.
 2. **Alimentation** : pour le SoARM 101 standard, DC 5V 5A est recommandé ; pour la version Pro, DC 12V 5A. Une alimentation insuffisante provoque des pertes de pas des servomoteurs ou des échecs de communication.
 3. **Exclusivité du port série** : sous Windows, le port est verrouillé en exclusivité, le même port ne peut donc pas être utilisé en même temps par le thread de scan de l'interface graphique et par le sous-processus d'étalonnage. L'outil arrête automatiquement le thread de scan et termine l'ancien processus avant d'opérer ; ne cliquez pas plusieurs fois à la main.
-4. **Permissions série sous Linux** : accéder à `/dev/ttyUSB*` / `/dev/ttyACM*` nécessite d'ajouter l'utilisateur au groupe `dialout` (voir le \[tutoriel Linux\](docs/zh/Linux教程.md)).
-5. **Nommage série sous macOS** : utilisez `/dev/cu.*` (non bloquant) plutôt que `/dev/tty.*` (bloquant, peut se figer) ; voir le \[tutoriel macOS\](docs/zh/macOS教程.md).
+4. **Permissions série sous Linux** : accéder à `/dev/ttyUSB*` / `/dev/ttyACM*` nécessite d'ajouter l'utilisateur au groupe `dialout` (voir le [tutoriel Linux](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/fr/Linux.md)).
+5. **Nommage série sous macOS** : utilisez `/dev/cu.*` (non bloquant) plutôt que `/dev/tty.*` (bloquant, peut se figer) ; voir le [tutoriel macOS](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/fr/macOS.md).
 6. **Branchement à chaud** : après avoir débranché l'USB, le programme tente de se reconnecter automatiquement ; après l'avoir rebranché, cliquez sur `🔄` pour actualiser la liste des ports.
 7. **Protection contre la surchauffe / surtension** : le programme surveille la tension et la température (alarme au-dessus de 60 °C). Si les servomoteurs restent chauds, arrêtez et laissez-les refroidir.
 8. **L'étalonnage du centre est irréversible** : après l'écriture, l'offset d'origine est écrasé et ne peut pas être annulé. Notez d'abord la position d'origine avant d'étalonner.

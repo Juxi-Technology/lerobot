@@ -34,22 +34,15 @@ English | [简体中文](../zh-hans/servo-calibration-tool.md) | [繁體中文](
 
 ## 📚 Detailed Tutorials
 
-### Chinese
+Full per-system tutorials in the [SO-ARM101-ServoController](https://github.com/Juxi-Technology/SO-ARM101-ServoController) repository:
 
 | OS | Tutorial |
 |-|-|
-| Windows | \[Windows tutorial\](docs/zh/Windows教程.md) |
-| Linux | \[Linux tutorial\](docs/zh/Linux教程.md) |
-| macOS | \[macOS tutorial\](docs/zh/macOS教程.md) |
+| Windows | [Windows tutorial](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/en/Windows.md) |
+| Linux | [Linux tutorial](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/en/Linux.md) |
+| macOS | [macOS tutorial](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/en/macOS.md) |
 
-### English
-
-| OS | Guide |
-|-|-|
-| Windows | \[Windows Guide\](docs/en/Windows.md) |
-| Linux | \[Linux Guide\](docs/en/Linux.md) |
-| macOS | \[macOS Guide\](docs/en/macOS.md) |
-
+Other languages: [docs/](https://github.com/Juxi-Technology/SO-ARM101-ServoController/tree/main/docs)
 ---
 
 ## 🖥️ Interface Overview
@@ -78,7 +71,7 @@ The main program has three tabs:
 
 ## 🚀 Quick Start
 
-> For the full per-system tutorials, see \[📚 Detailed Tutorials\](#-详细教程). Below are the key points for each system.
+> For the full per-system tutorials, see [📚 Detailed Tutorials](#-detailed-tutorials). Below are the key points for each system.
 
 ### Windows
 
@@ -279,8 +272,8 @@ python -m src.tools.run_calibration_middle <校准文件.json> --mode zero
 1. **Safety first**: center calibration persists to EEPROM. Before calibrating, make sure the power supply is stable and the arm will not collide with people or objects.
 2. **Power**: for the standard SoARM 101, DC 5V 5A is recommended; for the Pro version, DC 12V 5A. Insufficient power causes servo step loss or communication failures.
 3. **Serial port exclusivity**: on Windows the port is locked exclusively, so the same port cannot be used by both the GUI scan thread and the calibration subprocess at the same time. The tool automatically stops the scan thread and ends the old process before operating; do not click repeatedly by hand.
-4. **Linux serial permissions**: accessing `/dev/ttyUSB*` / `/dev/ttyACM*` requires adding the user to the `dialout` group (see the \[Linux tutorial\](docs/zh/Linux教程.md)).
-5. **macOS serial naming**: use `/dev/cu.*` (non-blocking) rather than `/dev/tty.*` (blocking, may hang); see the \[macOS tutorial\](docs/zh/macOS教程.md).
+4. **Linux serial permissions**: accessing `/dev/ttyUSB*` / `/dev/ttyACM*` requires adding the user to the `dialout` group (see the [Linux tutorial](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/en/Linux.md)).
+5. **macOS serial naming**: use `/dev/cu.*` (non-blocking) rather than `/dev/tty.*` (blocking, may hang); see the [macOS tutorial](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/en/macOS.md).
 6. **Hot-plugging**: after unplugging the USB the program tries to reconnect automatically; after plugging it back in, click `🔄` to refresh the port list.
 7. **Over-temperature / over-voltage protection**: the program monitors voltage and temperature (alarm above 60°C). If the servos stay hot, stop and let them cool.
 8. **Center calibration is irreversible**: after writing, the original offset is overwritten and cannot be undone. Record the original position first before calibrating.

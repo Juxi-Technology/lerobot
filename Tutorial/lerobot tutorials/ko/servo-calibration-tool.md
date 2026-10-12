@@ -34,22 +34,15 @@
 
 ## 📚 상세 튜토리얼
 
-### 중국어
+[SO-ARM101-ServoController](https://github.com/Juxi-Technology/SO-ARM101-ServoController) 저장소의 시스템별 전체 튜토리얼:
 
 | OS | 튜토리얼 |
 |-|-|
-| Windows | \[Windows 튜토리얼\](docs/zh/Windows教程.md) |
-| Linux | \[Linux 튜토리얼\](docs/zh/Linux教程.md) |
-| macOS | \[macOS 튜토리얼\](docs/zh/macOS教程.md) |
+| Windows | [Windows 튜토리얼](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/ko/Windows.md) |
+| Linux | [Linux 튜토리얼](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/ko/Linux.md) |
+| macOS | [macOS 튜토리얼](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/ko/macOS.md) |
 
-### 영어
-
-| OS | 가이드 |
-|-|-|
-| Windows | \[Windows 가이드\](docs/en/Windows.md) |
-| Linux | \[Linux 가이드\](docs/en/Linux.md) |
-| macOS | \[macOS 가이드\](docs/en/macOS.md) |
-
+다른 언어: [docs/](https://github.com/Juxi-Technology/SO-ARM101-ServoController/tree/main/docs)
 ---
 
 ## 🖥️ 인터페이스 개요
@@ -78,7 +71,7 @@
 
 ## 🚀 빠른 시작
 
-> 시스템별 전체 튜토리얼은 \[📚 상세 튜토리얼\](#-详细教程)을 참고하십시오. 아래는 각 시스템의 핵심 사항입니다.
+> 시스템별 전체 튜토리얼은 [📚 상세 튜토리얼](#-상세-튜토리얼)을 참고하십시오. 아래는 각 시스템의 핵심 사항입니다.
 
 ### Windows
 
@@ -279,8 +272,8 @@ python -m src.tools.run_calibration_middle <校准文件.json> --mode zero
 1. **안전 우선**: 중심 캘리브레이션은 EEPROM에 영구 저장됩니다. 캘리브레이션 전에 전원 공급이 안정적이고 팔이 사람이나 물체와 충돌하지 않을지 확인하십시오.
 2. **전원**: 표준 SoARM 101은 DC 5V 5A를 권장하고, 프로 버전은 DC 12V 5A입니다. 전원이 부족하면 서보 스텝 로스나 통신 실패가 발생합니다.
 3. **시리얼 포트 배타성**: Windows에서는 포트가 배타적으로 잠기므로, 같은 포트를 GUI 스캔 스레드와 캘리브레이션 하위 프로세스가 동시에 사용할 수 없습니다. 도구는 작업 전에 스캔 스레드를 자동으로 중지하고 이전 프로세스를 종료하므로, 손으로 반복해서 클릭하지 마십시오.
-4. **Linux 시리얼 권한**: `/dev/ttyUSB*` / `/dev/ttyACM*`에 접근하려면 사용자를 `dialout` 그룹에 추가해야 합니다 (\[Linux 튜토리얼\](docs/zh/Linux教程.md) 참고).
-5. **macOS 시리얼 명명**: `/dev/tty.*` (블로킹, 멈출 수 있음) 대신 `/dev/cu.*` (비블로킹)를 사용하십시오. \[macOS 튜토리얼\](docs/zh/macOS教程.md)을 참고하십시오.
+4. **Linux 시리얼 권한**: `/dev/ttyUSB*` / `/dev/ttyACM*`에 접근하려면 사용자를 `dialout` 그룹에 추가해야 합니다 ([Linux 튜토리얼](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/ko/Linux.md) 참고).
+5. **macOS 시리얼 명명**: `/dev/tty.*` (블로킹, 멈출 수 있음) 대신 `/dev/cu.*` (비블로킹)를 사용하십시오. [macOS 튜토리얼](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/ko/macOS.md)을 참고하십시오.
 6. **핫 플러그**: USB를 뽑으면 프로그램이 자동으로 재연결을 시도합니다. 다시 꽂은 후 `🔄`를 클릭해 포트 목록을 새로 고치십시오.
 7. **과온 / 과전압 보호**: 프로그램은 전압과 온도를 모니터링합니다 (60°C 초과 시 알람). 서보가 뜨거운 상태로 유지되면 멈추고 식히십시오.
 8. **중심 캘리브레이션은 되돌릴 수 없음**: 기록 후 원래 오프셋이 덮어써지고 복구할 수 없습니다. 캘리브레이션 전에 원래 위치를 먼저 기록하십시오.

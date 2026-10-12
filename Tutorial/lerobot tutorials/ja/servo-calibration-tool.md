@@ -34,22 +34,15 @@
 
 ## 📚 詳細チュートリアル
 
-### 中国語
+[SO-ARM101-ServoController](https://github.com/Juxi-Technology/SO-ARM101-ServoController) リポジトリにある、システム別の完全なチュートリアル：
 
 | OS | チュートリアル |
 |-|-|
-| Windows | \[Windows チュートリアル\](docs/zh/Windows教程.md) |
-| Linux | \[Linux チュートリアル\](docs/zh/Linux教程.md) |
-| macOS | \[macOS チュートリアル\](docs/zh/macOS教程.md) |
+| Windows | [Windows チュートリアル](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/ja/Windows.md) |
+| Linux | [Linux チュートリアル](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/ja/Linux.md) |
+| macOS | [macOS チュートリアル](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/ja/macOS.md) |
 
-### 英語
-
-| OS | ガイド |
-|-|-|
-| Windows | \[Windows ガイド\](docs/en/Windows.md) |
-| Linux | \[Linux ガイド\](docs/en/Linux.md) |
-| macOS | \[macOS ガイド\](docs/en/macOS.md) |
-
+他の言語：[docs/](https://github.com/Juxi-Technology/SO-ARM101-ServoController/tree/main/docs)
 ---
 
 ## 🖥️ インターフェース概要
@@ -78,7 +71,7 @@
 
 ## 🚀 クイックスタート
 
-> システムごとの詳細なチュートリアルは \[📚 詳細チュートリアル\](#-详细教程) を参照してください。以下は各システムのポイントです。
+> システムごとの詳細なチュートリアルは [📚 詳細チュートリアル](#-詳細チュートリアル) を参照してください。以下は各システムのポイントです。
 
 ### Windows
 
@@ -279,8 +272,8 @@ python -m src.tools.run_calibration_middle <校准文件.json> --mode zero
 1. **安全第一**：中心キャリブレーションは EEPROM に永続化されます。キャリブレーションの前に、電源が安定しており、アームが人や物に衝突しないことを確認してください。
 2. **電源**：標準の SoARM 101 では DC 5V 5A を推奨します。Pro 版では DC 12V 5A です。電力が不足すると、サーボのステップ抜けや通信障害が発生します。
 3. **シリアルポートの排他性**：Windows ではポートが排他的にロックされるため、同じポートを GUI のスキャンスレッドとキャリブレーションのサブプロセスが同時に使用することはできません。ツールは操作前にスキャンスレッドを自動的に停止し、古いプロセスを終了します。手動で繰り返しクリックしないでください。
-4. **Linux のシリアル権限**：`/dev/ttyUSB*` / `/dev/ttyACM*` にアクセスするには、ユーザーを `dialout` グループに追加する必要があります（\[Linux チュートリアル\](docs/zh/Linux教程.md)を参照）。
-5. **macOS のシリアル命名**：`/dev/tty.*`（ブロッキング、ハングする可能性があります）ではなく `/dev/cu.*`（ノンブロッキング）を使用してください。\[macOS チュートリアル\](docs/zh/macOS教程.md)を参照してください。
+4. **Linux のシリアル権限**：`/dev/ttyUSB*` / `/dev/ttyACM*` にアクセスするには、ユーザーを `dialout` グループに追加する必要があります（[Linux チュートリアル](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/ja/Linux.md)を参照）。
+5. **macOS のシリアル命名**：`/dev/tty.*`（ブロッキング、ハングする可能性があります）ではなく `/dev/cu.*`（ノンブロッキング）を使用してください。[macOS チュートリアル](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/ja/macOS.md)を参照してください。
 6. **ホットプラグ**：USB を抜いた後、プログラムは自動的に再接続を試みます。再度差し込んだ後、`🔄` をクリックしてポート一覧を更新してください。
 7. **過熱 / 過電圧保護**：プログラムは電圧と温度を監視します（60°C を超えるとアラーム）。サーボが熱いままの場合は、停止して冷ましてください。
 8. **中心キャリブレーションは不可逆**：書き込み後、元のオフセットは上書きされ、元に戻せません。キャリブレーションの前に、まず元の位置を記録してください。

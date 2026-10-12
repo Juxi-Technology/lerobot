@@ -34,22 +34,15 @@
 
 ## 📚 詳細教學
 
-### 中文
+在 [SO-ARM101-ServoController](https://github.com/Juxi-Technology/SO-ARM101-ServoController) 倉庫中，按系統分的完整教學：
 
 | 系統 | 教學 |
 |-|-|
-| Windows | \[Windows 使用教學\](docs/zh/Windows教程.md) |
-| Linux | \[Linux 使用教學\](docs/zh/Linux教程.md) |
-| macOS | \[macOS 使用教學\](docs/zh/macOS教程.md) |
+| Windows | [Windows 使用教學](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/zh-hant/Windows.md) |
+| Linux | [Linux 使用教學](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/zh-hant/Linux.md) |
+| macOS | [macOS 使用教學](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/zh-hant/macOS.md) |
 
-### English
-
-| OS | Guide |
-|-|-|
-| Windows | \[Windows Guide\](docs/en/Windows.md) |
-| Linux | \[Linux Guide\](docs/en/Linux.md) |
-| macOS | \[macOS Guide\](docs/en/macOS.md) |
-
+其他語言：[docs/](https://github.com/Juxi-Technology/SO-ARM101-ServoController/tree/main/docs)
 ---
 
 ## 🖥️ 介面介紹
@@ -78,7 +71,7 @@
 
 ## 🚀 快速開始
 
-> 完整分系統教學見 \[📚 詳細教學\](#-详细教程)。以下為各系統教學要點。
+> 完整分系統教學見 [📚 詳細教學](#-詳細教學)。以下為各系統教學要點。
 
 ### Windows
 
@@ -279,8 +272,8 @@ python -m src.tools.run_calibration_middle <校准文件.json> --mode zero
 1. **安全第一**：中位校正會把 EEPROM 持久化。校正前確認供電穩定、機械手臂不會碰撞到人或物。
 2. **供電**：SoARM 101 標準版建議 DC 5V 5A，Pro 版建議 DC 12V 5A。供電不足會導致伺服馬達丟步或通訊失敗。
 3. **序列埠獨佔**：Windows 下序列埠被程式獨佔，同一連接埠不能同時被 GUI 掃描執行緒和校正子行程佔用。工具會自動先停掃描執行緒、結束舊行程再操作，請勿手動重複點擊。
-4. **Linux 序列埠權限**：存取 `/dev/ttyUSB*` / `/dev/ttyACM*` 需將使用者加入 `dialout` 群組（見 \[Linux 教學\](docs/zh/Linux教程.md)）。
-5. **macOS 序列埠命名**：請使用 `/dev/cu.*`（非阻塞）而非 `/dev/tty.*`（阻塞，可能卡住），見 \[macOS 教學\](docs/zh/macOS教程.md)。
+4. **Linux 序列埠權限**：存取 `/dev/ttyUSB*` / `/dev/ttyACM*` 需將使用者加入 `dialout` 群組（見 [Linux 教學](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/zh-hant/Linux.md)）。
+5. **macOS 序列埠命名**：請使用 `/dev/cu.*`（非阻塞）而非 `/dev/tty.*`（阻塞，可能卡住），見 [macOS 教學](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/zh-hant/macOS.md)。
 6. **熱插拔**：拔掉 USB 後程式會嘗試自動重新連線；重新插回後點擊 `🔄` 重新整理連接埠清單。
 7. **過溫 / 過壓保護**：程式會監控電壓與溫度（溫度 > 60°C 告警）。若伺服馬達連續高溫，請停機散熱。
 8. **中位校正不可逆**：寫入後原偏移被覆蓋，無法復原。建議先記錄原始位置再校正。

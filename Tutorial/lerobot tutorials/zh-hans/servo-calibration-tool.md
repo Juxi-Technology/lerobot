@@ -34,22 +34,15 @@
 
 ## 📚 详细教程
 
-### 中文
+在 [SO-ARM101-ServoController](https://github.com/Juxi-Technology/SO-ARM101-ServoController) 仓库中，按系统分的完整教程：
 
 | 系统 | 教程 |
 |-|-|
-| Windows | \[Windows 使用教程\](docs/zh/Windows教程.md) |
-| Linux | \[Linux 使用教程\](docs/zh/Linux教程.md) |
-| macOS | \[macOS 使用教程\](docs/zh/macOS教程.md) |
+| Windows | [Windows 使用教程](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/zh-hans/Windows.md) |
+| Linux | [Linux 使用教程](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/zh-hans/Linux.md) |
+| macOS | [macOS 使用教程](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/zh-hans/macOS.md) |
 
-### English
-
-| OS | Guide |
-|-|-|
-| Windows | \[Windows Guide\](docs/en/Windows.md) |
-| Linux | \[Linux Guide\](docs/en/Linux.md) |
-| macOS | \[macOS Guide\](docs/en/macOS.md) |
-
+其它语言：[docs/](https://github.com/Juxi-Technology/SO-ARM101-ServoController/tree/main/docs)
 ---
 
 ## 🖥️ 界面介绍
@@ -78,7 +71,7 @@
 
 ## 🚀 快速开始
 
-> 完整分系统教程见 \[📚 详细教程\](#-详细教程)。以下为各系统教程要点。
+> 完整分系统教程见 [📚 详细教程](#-详细教程)。以下为各系统教程要点。
 
 ### Windows
 
@@ -279,8 +272,8 @@ python -m src.tools.run_calibration_middle <校准文件.json> --mode zero
 1. **安全第一**：中位校准会把 EEPROM 持久化。校准前确认供电稳定、机械臂不会碰撞到人或物。
 2. **供电**：SoARM 101 标准版建议 DC 5V 5A，Pro 版建议 DC 12V 5A。供电不足会导致舵机丢步或通信失败。
 3. **串口独占**：Windows 下串口被程序独占，同一端口不能同时被 GUI 扫描线程和校准子进程占用。工具会自动先停扫描线程、结束旧进程再操作，请勿手动重复点击。
-4. **Linux 串口权限**：访问 `/dev/ttyUSB*` / `/dev/ttyACM*` 需将用户加入 `dialout` 组（见 \[Linux 教程\](docs/zh/Linux教程.md)）。
-5. **macOS 串口命名**：请使用 `/dev/cu.*`（非阻塞）而非 `/dev/tty.*`（阻塞，可能卡住），见 \[macOS 教程\](docs/zh/macOS教程.md)。
+4. **Linux 串口权限**：访问 `/dev/ttyUSB*` / `/dev/ttyACM*` 需将用户加入 `dialout` 组（见 [Linux 教程](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/zh-hans/Linux.md)）。
+5. **macOS 串口命名**：请使用 `/dev/cu.*`（非阻塞）而非 `/dev/tty.*`（阻塞，可能卡住），见 [macOS 教程](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/zh-hans/macOS.md)。
 6. **热插拔**：拔掉 USB 后程序会尝试自动重连；重新插回后点击 `🔄` 刷新端口列表。
 7. **过温 / 过压保护**：程序会监控电压与温度（温度 > 60°C 告警）。若舵机连续高温，请停机散热。
 8. **中位校准不可逆**：写入后原偏移被覆盖，无法撤销。建议先记录原始位置再校准。

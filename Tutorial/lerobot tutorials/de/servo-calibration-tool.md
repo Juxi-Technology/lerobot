@@ -34,22 +34,15 @@
 
 ## 📚 Ausführliche Tutorials
 
-### Chinesisch
+Die vollständigen Tutorials je Betriebssystem im Repository [SO-ARM101-ServoController](https://github.com/Juxi-Technology/SO-ARM101-ServoController):
 
 | OS | Tutorial |
 |-|-|
-| Windows | \[Windows tutorial\](docs/zh/Windows教程.md) |
-| Linux | \[Linux tutorial\](docs/zh/Linux教程.md) |
-| macOS | \[macOS tutorial\](docs/zh/macOS教程.md) |
+| Windows | [Windows tutorial](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/de/Windows.md) |
+| Linux | [Linux tutorial](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/de/Linux.md) |
+| macOS | [macOS tutorial](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/de/macOS.md) |
 
-### Englisch
-
-| OS | Anleitung |
-|-|-|
-| Windows | \[Windows Guide\](docs/en/Windows.md) |
-| Linux | \[Linux Guide\](docs/en/Linux.md) |
-| macOS | \[macOS Guide\](docs/en/macOS.md) |
-
+Andere Sprachen: [docs/](https://github.com/Juxi-Technology/SO-ARM101-ServoController/tree/main/docs)
 ---
 
 ## 🖥️ Überblick über die Oberfläche
@@ -78,7 +71,7 @@ Das Hauptprogramm hat drei Tabs:
 
 ## 🚀 Schnellstart
 
-> Die vollständigen Tutorials je System finden Sie unter \[📚 Ausführliche Tutorials\](#-详细教程). Nachfolgend die wichtigsten Punkte für jedes System.
+> Die vollständigen Tutorials je System finden Sie unter [📚 Ausführliche Tutorials](#-ausführliche-tutorials). Nachfolgend die wichtigsten Punkte für jedes System.
 
 ### Windows
 
@@ -279,8 +272,8 @@ python -m src.tools.run_calibration_middle <校准文件.json> --mode zero
 1. **Sicherheit zuerst**: Die Mittelpunkt-Kalibrierung wird dauerhaft im EEPROM gespeichert. Stellen Sie vor der Kalibrierung sicher, dass die Stromversorgung stabil ist und der Arm nicht mit Personen oder Gegenständen kollidiert.
 2. **Stromversorgung**: Für den Standard-SoARM 101 werden DC 5 V 5 A empfohlen; für die Pro-Version DC 12 V 5 A. Unzureichende Leistung führt zu Schrittverlusten des Servos oder Kommunikationsfehlern.
 3. **Exklusivität des seriellen Ports**: Unter Windows wird der Port exklusiv gesperrt, sodass derselbe Port nicht gleichzeitig vom Scan-Thread der GUI und vom Kalibrierungs-Subprozess verwendet werden kann. Das Tool stoppt vor dem Betrieb automatisch den Scan-Thread und beendet den alten Prozess; klicken Sie nicht wiederholt von Hand.
-4. **Serielle Berechtigungen unter Linux**: Für den Zugriff auf `/dev/ttyUSB*` / `/dev/ttyACM*` muss der Benutzer zur Gruppe `dialout` hinzugefügt werden (siehe \[Linux tutorial\](docs/zh/Linux教程.md)).
-5. **Serielle Benennung unter macOS**: Verwenden Sie `/dev/cu.*` (nicht blockierend) statt `/dev/tty.*` (blockierend, kann hängen bleiben); siehe \[macOS tutorial\](docs/zh/macOS教程.md).
+4. **Serielle Berechtigungen unter Linux**: Für den Zugriff auf `/dev/ttyUSB*` / `/dev/ttyACM*` muss der Benutzer zur Gruppe `dialout` hinzugefügt werden (siehe [Linux tutorial](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/de/Linux.md)).
+5. **Serielle Benennung unter macOS**: Verwenden Sie `/dev/cu.*` (nicht blockierend) statt `/dev/tty.*` (blockierend, kann hängen bleiben); siehe [macOS tutorial](https://github.com/Juxi-Technology/SO-ARM101-ServoController/blob/main/docs/de/macOS.md).
 6. **Hot-Plugging**: Nach dem Abziehen des USB versucht das Programm, sich automatisch neu zu verbinden; klicken Sie nach dem erneuten Anstecken auf `🔄`, um die Portliste zu aktualisieren.
 7. **Überhitzungs- / Überspannungsschutz**: Das Programm überwacht Spannung und Temperatur (Alarm über 60 °C). Wenn die Servos heiß bleiben, stoppen Sie und lassen Sie sie abkühlen.
 8. **Die Mittelpunkt-Kalibrierung ist irreversibel**: Nach dem Schreiben wird der ursprüngliche Offset überschrieben und kann nicht rückgängig gemacht werden. Notieren Sie vor der Kalibrierung zunächst die ursprüngliche Position.
