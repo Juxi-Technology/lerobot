@@ -45,6 +45,8 @@
 | [舵机校准工具](Tutorial/lerobot%20tutorials/zh-hans/servo-calibration-tool.md) | So-ARM 系列 STS3215 舵机 ID 与校准工具，可跳过 |
 | [URDF文件及资料参考](Tutorial/lerobot%20tutorials/zh-hans/urdf-and-resources.md) | URDF 模型与相关下载 |
 
+> 🐳 **用 Docker 镜像驱动机器人？** 见 [XLeRobot Docker 教程](Tutorial/xlerobot-docker-tutorials/zh-hans/deployment/01-Overview.md)——拉取镜像、生成 NVIDIA CDI 配置，然后让 XLeRobot 整机或单条 SO-ARM101 跑起来。
+
 ### 其它语言
 
 同样的章节，另外 10 种语言——把上面任一链接中的语言目录替换即可：

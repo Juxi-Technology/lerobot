@@ -18,7 +18,7 @@ English | [简体中文](README_zh.md)
 
 This repository ships the complete **SO-ARM101** course: nine steps from installing LeRobot to deploying a trained policy, plus assembly, simulation and reference material. Every chapter exists in **11 languages** under the same filename.
 
-> 📁 **[Tutorial/README.md](Tutorial/README.md)** indexes the whole `Tutorial/` folder — every chapter, all 11 languages.
+> 📁 **[Tutorial/README.md](Tutorial/README.md)** indexes the whole `Tutorial/` folder — both tutorial sets, all 11 languages.
 
 | # | Chapter | What it covers |
 |:--:|---|---|
@@ -44,6 +44,8 @@ This repository ships the complete **SO-ARM101** course: nine steps from install
 | [ROS2 simulation control](Tutorial/lerobot%20tutorials/en/ros2-simulation.md) | Control the arm from ROS2 |
 | [STS3215 servo calibration tool](Tutorial/lerobot%20tutorials/en/servo-calibration-tool.md) | Optional servo ID and calibration utility |
 | [URDF files and reference resources](Tutorial/lerobot%20tutorials/en/urdf-and-resources.md) | URDF model and related downloads |
+
+> 🐳 **Driving the robot from a Docker image?** See the [XLeRobot Docker tutorials](Tutorial/xlerobot-docker-tutorials/en/deployment/01-Overview.md) — pull the image, generate the NVIDIA CDI spec, then run XLeRobot or a single SO-ARM101.
 
 ### Other languages
 
