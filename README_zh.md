@@ -18,7 +18,7 @@
 
 本仓库自带一套完整的 **SO-ARM101** 教程：**九步**走完从安装 LeRobot 到部署训练好的策略，另有组装、仿真与参考资料。每一章都提供 **11 种语言**，且文件名在所有语言下完全一致。
 
-> 📁 **[Tutorial/README_zh.md](Tutorial/README_zh.md)** 是 `Tutorial/` 目录的总索引——两套教程、11 种语言都在这里。
+> 📁 **[Tutorial/README_zh.md](Tutorial/README_zh.md)** 是 `Tutorial/` 目录的总索引——三套教程都在这里。
 
 | # | 章节 | 内容 |
 |:--:|---|---|

@@ -18,7 +18,7 @@ English | [简体中文](README_zh.md)
 
 This repository ships the complete **SO-ARM101** course: nine steps from installing LeRobot to deploying a trained policy, plus assembly, simulation and reference material. Every chapter exists in **11 languages** under the same filename.
 
-> 📁 **[Tutorial/README.md](Tutorial/README.md)** indexes the whole `Tutorial/` folder — both tutorial sets, all 11 languages.
+> 📁 **[Tutorial/README.md](Tutorial/README.md)** indexes the whole `Tutorial/` folder — all three tutorial sets.
 
 | # | Chapter | What it covers |
 |:--:|---|---|

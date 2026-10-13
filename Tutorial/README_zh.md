@@ -2,17 +2,19 @@
 
 # 教程
 
-这个目录下有两套互相独立的教程，解决的问题不同——按你的硬件选。
+这个目录下有三套互相独立的教程。按你的硬件选，或者按你想不想用网页界面选。
 
 | 教程 | 目录 | 适用 | 语言 |
 |---|---|---|---|
 | **SO-ARM101 教程** | [`lerobot tutorials/`](lerobot%20tutorials/zh-hans/index.md) | 单条 SO-ARM101 机械臂（12 个舵机），在笔记本或台式机上跑 | 11 种 |
 | **XLeRobot Docker** | [`xlerobot-docker-tutorials/`](xlerobot-docker-tutorials/README.md) | 一块 Jetson 板子，跑现成的 Docker 镜像 | 11 种 |
+| **leLab** | [`lelab/`](lelab/README_zh.md) | 同一套 SO-101 流程，但用浏览器操作，不敲命令 | 2 种 |
 
-两套都用 LeRobot，区别在于**环境由谁装**：
+三套都用 LeRobot，区别在**帮你装好了多少**：
 
-- **SO-ARM101 教程**是从零开始的路径——你自己装 LeRobot，然后校准、采数据、训练、部署。
+- **SO-ARM101 教程**是从零开始的路径——自己装 LeRobot，然后在命令行里校准、采数据、训练、部署。
 - **XLeRobot Docker**跳过安装——环境和机器人代码已经打包进镜像里了。
+- **leLab**把命令行换成网页界面：校准、遥操作、录制、训练、推理全部点着走。它会把 LeRobot 作为依赖装上。
 
 ---
 
@@ -53,9 +55,27 @@
 
 > 第 2 个和第 3 个文件夹是**二选一**——看你的硬件走哪条。两条路用的是同一套环境，随时能切，不用重装任何东西。
 
+## 3. leLab —— [`lelab/`](lelab/README_zh.md)
+
+同一套 SO-101 流程，改用浏览器操作，不敲 `lerobot-*` 命令。共 7 篇：
+
+[01 总览](lelab/zh-hans/01-overview.md) ·
+[02 安装与启动](lelab/zh-hans/02-install.md) ·
+[03 接线与校准](lelab/zh-hans/03-calibration.md) ·
+[04 遥操作](lelab/zh-hans/04-teleoperation.md) ·
+[05 录制数据集](lelab/zh-hans/05-record-dataset.md) ·
+[06 训练与推理](lelab/zh-hans/06-train-and-inference.md) ·
+[07 常见问题](lelab/zh-hans/07-troubleshooting.md)
+
+安装：
+
+```bash
+uv tool install --with-executables-from huggingface_hub git+https://github.com/Juxi-Technology/leLab.git && lelab
+```
+
 ## 语言
 
-每一章都有 **11 种语言**，且**文件名完全相同**——只有正文翻译，路径不翻译。
+SO-ARM101 教程和 XLeRobot Docker 每一章都有 **11 种语言**，且**文件名完全相同**——只有正文翻译，路径不翻译。
 
 | 语言 | SO-ARM101 教程 | XLeRobot Docker |
 |---|---|---|
@@ -71,6 +91,8 @@
 | Português (BR) | [index.md](lerobot%20tutorials/pt-br/index.md) | [01-Overview.md](xlerobot-docker-tutorials/pt-br/deployment/01-Overview.md) |
 | Português (PT) | [index.md](lerobot%20tutorials/pt-pt/index.md) | [01-Overview.md](xlerobot-docker-tutorials/pt-pt/deployment/01-Overview.md) |
 
+**leLab** 目前有英文和简体中文两种：[en](lelab/en/01-overview.md) · [zh-hans](lelab/zh-hans/01-overview.md)。
+
 ## 目录结构
 
 ```
@@ -85,14 +107,17 @@ Tutorial/
 │   │   ├── basics/ 08-train-model/ 09-inference/ ……  各章的附属页面
 │   │   └── images/                  所有图片/视频只存这一份，各语言共用
 │   └── en/ zh-hant/ de/ es/ fr/ it/ ja/ ko/ pt-br/ pt-pt/
-└── xlerobot-docker-tutorials/       XLeRobot Docker —— 11 种语言
-    ├── README.md                    本套教程的语言索引
-    ├── zh-hans/
-    │   ├── deployment/              01-Overview · 02-Environment-Setup · 03-Deployment
-    │   ├── xlerobot/                01-Operation
-    │   ├── lerobot/                 01-Operation
-    │   └── troubleshooting/         01-Troubleshooting
-    └── en/ zh-hant/ de/ es/ fr/ it/ ja/ ko/ pt-br/ pt-pt/
+├── xlerobot-docker-tutorials/       XLeRobot Docker —— 11 种语言
+│   ├── README.md                    本套教程的语言索引
+│   ├── zh-hans/
+│   │   ├── deployment/              01-Overview · 02-Environment-Setup · 03-Deployment
+│   │   ├── xlerobot/                01-Operation
+│   │   ├── lerobot/                 01-Operation
+│   │   └── troubleshooting/         01-Troubleshooting
+│   └── en/ zh-hant/ de/ es/ fr/ it/ ja/ ko/ pt-br/ pt-pt/
+└── lelab/                           leLab —— 英文 + 简体中文
+    ├── README.md  README_zh.md      索引，每语言一份
+    └── en/ zh-hans/                 01-overview …… 07-troubleshooting
 ```
 
 > 图片和视频**只在 `lerobot tutorials/en/images/` 存一份**，其它语言都引用这里。不要再往别的语言目录里拷一份。
@@ -100,6 +125,7 @@ Tutorial/
 ## 相关链接
 
 - [仓库主页](../README.md)——LeRobot 是什么、各机械臂的文档、资源
+- leLab 仓库：<https://github.com/Juxi-Technology/leLab>
 - SO-ARM101 产品页：<https://wiki.juxitech.com/tutorials/robot-arms/so-arm101/SO-ARM101-Tutorial>
 - XLeRobot 项目：<https://github.com/Vector-Wangel/XLeRobot>
 - LeRobot 文档：<https://huggingface.co/docs/lerobot>

@@ -2,17 +2,19 @@ English | [简体中文](README_zh.md)
 
 # Tutorials
 
-Two independent tutorial sets live in this folder. They solve different problems — pick by your hardware.
+Three independent tutorial sets live in this folder. Pick by your hardware, or by whether you want a browser interface.
 
 | Set | Folder | For | Languages |
 |---|---|---|---|
 | **SO-ARM101 course** | [`lerobot tutorials/`](lerobot%20tutorials/en/index.md) | A single SO-ARM101 arm (12 servos), on a laptop or desktop | 11 |
 | **XLeRobot Docker** | [`xlerobot-docker-tutorials/`](xlerobot-docker-tutorials/README.md) | A Jetson board running the prebuilt Docker image | 11 |
+| **leLab** | [`lelab/`](lelab/README.md) | The same SO-101 workflow, driven from a browser instead of the command line | 2 |
 
-Both sets use LeRobot. The difference is who sets up the environment:
+All three use LeRobot. What differs is how much they set up for you:
 
-- The **SO-ARM101 course** is the from-scratch path — you install LeRobot yourself, then calibrate, collect data, train and deploy.
+- The **SO-ARM101 course** is the from-scratch path — install LeRobot yourself, then calibrate, collect data, train and deploy from the command line.
 - The **XLeRobot Docker** set skips installation — the environment and the robot code are already inside the image.
+- **leLab** replaces the command line with a web UI: calibrate, teleoperate, record, train and run inference by clicking. It installs LeRobot as a dependency.
 
 ---
 
@@ -53,9 +55,27 @@ Read the four folders in this order:
 
 > Folders 2 and 3 are **alternatives** — pick the one that matches your hardware. It is the same environment either way, so you can switch at any time without reinstalling anything.
 
+## 3. leLab — [`lelab/`](lelab/README.md)
+
+The SO-101 workflow in a browser, instead of the `lerobot-*` command line. Seven pages:
+
+[01 Overview](lelab/en/01-overview.md) ·
+[02 Install and run](lelab/en/02-install.md) ·
+[03 Connect and calibrate](lelab/en/03-calibration.md) ·
+[04 Teleoperation](lelab/en/04-teleoperation.md) ·
+[05 Record a dataset](lelab/en/05-record-dataset.md) ·
+[06 Train and run inference](lelab/en/06-train-and-inference.md) ·
+[07 Troubleshooting](lelab/en/07-troubleshooting.md)
+
+Install with:
+
+```bash
+uv tool install --with-executables-from huggingface_hub git+https://github.com/Juxi-Technology/leLab.git && lelab
+```
+
 ## Languages
 
-Every chapter exists in all 11 languages with **identical filenames** — only the body text is translated, never the path.
+Every chapter of the SO-ARM101 course and the XLeRobot Docker set exists in all 11 languages with **identical filenames** — only the body text is translated, never the path.
 
 | Language | SO-ARM101 course | XLeRobot Docker |
 |---|---|---|
@@ -71,6 +91,8 @@ Every chapter exists in all 11 languages with **identical filenames** — only t
 | Português (BR) | [index.md](lerobot%20tutorials/pt-br/index.md) | [01-Overview.md](xlerobot-docker-tutorials/pt-br/deployment/01-Overview.md) |
 | Português (PT) | [index.md](lerobot%20tutorials/pt-pt/index.md) | [01-Overview.md](xlerobot-docker-tutorials/pt-pt/deployment/01-Overview.md) |
 
+**leLab** exists in English and Simplified Chinese so far: [en](lelab/en/01-overview.md) · [zh-hans](lelab/zh-hans/01-overview.md).
+
 ## Folder layout
 
 ```
@@ -85,14 +107,17 @@ Tutorial/
 │   │   ├── basics/ 08-train-model/ 09-inference/ …   per-chapter sub-pages
 │   │   └── images/                  all media lives here, shared by every language
 │   └── zh-hans/ zh-hant/ de/ es/ fr/ it/ ja/ ko/ pt-br/ pt-pt/
-└── xlerobot-docker-tutorials/       XLeRobot Docker — 11 languages
-    ├── README.md                    language index for this set
-    ├── en/
-    │   ├── deployment/              01-Overview · 02-Environment-Setup · 03-Deployment
-    │   ├── xlerobot/                01-Operation
-    │   ├── lerobot/                 01-Operation
-    │   └── troubleshooting/         01-Troubleshooting
-    └── zh-hans/ zh-hant/ de/ es/ fr/ it/ ja/ ko/ pt-br/ pt-pt/
+├── xlerobot-docker-tutorials/       XLeRobot Docker — 11 languages
+│   ├── README.md                    language index for this set
+│   ├── en/
+│   │   ├── deployment/              01-Overview · 02-Environment-Setup · 03-Deployment
+│   │   ├── xlerobot/                01-Operation
+│   │   ├── lerobot/                 01-Operation
+│   │   └── troubleshooting/         01-Troubleshooting
+│   └── zh-hans/ zh-hant/ de/ es/ fr/ it/ ja/ ko/ pt-br/ pt-pt/
+└── lelab/                           leLab — English + Simplified Chinese
+    ├── README.md  README_zh.md      index, one per language
+    └── en/ zh-hans/                 01-overview … 07-troubleshooting
 ```
 
 > Media is stored **once** under `lerobot tutorials/en/images/`; every other language references it there. Do not duplicate images into other language folders.
@@ -100,6 +125,7 @@ Tutorial/
 ## Related
 
 - [Repository README](../README.md) — what LeRobot is, robot-arm documentation, and resources
+- leLab repository: <https://github.com/Juxi-Technology/leLab>
 - SO-ARM101 product page: <https://wiki.juxitech.com/tutorials/robot-arms/so-arm101/SO-ARM101-Tutorial>
 - XLeRobot project: <https://github.com/Vector-Wangel/XLeRobot>
 - LeRobot documentation: <https://huggingface.co/docs/lerobot>
